@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+:root{
+    --FontFamilyBody: 'Raleway', sans-serif;
+    --FontSizeBody: 14px;
+    --GradientOne:     hsl(6, 100%, 80%);
+    --GradientTwo:     hsl(335, 100%, 65%);
+    --PaleBlue:        hsl(243, 100%, 93%);
+    --GrayishBlue:     hsl(229, 7%, 55%);
+    --DarkBlue:        hsl(228, 56%, 26%);
+    --VeryDarkBlue:    hsl(229, 57%, 11%);
+    --VeryDarkBlueBar: hsla(229, 57%, 11%, 0.623);
+    --White:           hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: var(--FontSizeBody);
+    font-family: var(--FontFamilyBody);
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    width: 375px;
+    margin: 120px auto;   
+}
+.sectionOne{
+    width: 320px;
+    height: 200px;
+    background: var(--DarkBlue);
+    margin: 0 auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 100px;
+    padding: 40px;
+    margin-bottom: 15px;
+}
+.sectionOne__logo{
+    margin-bottom: 30px;
+}
+.sectionOne__icons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;    
+}
+.sectionOne__singleIconBox{   
+    width: 49px;
+    height: 49px;
+    background: var(--VeryDarkBlue);
+    border-radius: 10px;    
+}
+.sectionOne__singleIcon--file{
+    margin-left: 15px;
+    margin-top: 12px;
+}
+.sectionOne__singleIcon--folder{
+    margin-left: 12.5px;
+    margin-top: 14px;
+}
+.sectionOne__singleIcon--cloud{
+    margin-left: 12px;
+    margin-top: 17px;
+}
+.sectionTwo{
+    width: 320px;
+    height: 170px;
+    background: var(--DarkBlue);
+    margin: 0 auto;
+    border-radius: 12px;
+    padding: 40px;
+    position: relative;
+}
+p{
+    color: var(--GrayishBlue); 
+    font-weight: 400; 
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 15px;
+    letter-spacing: -5;
+}
+span{
+    color: var(--PaleBlue);
+    font-weight: 700;
+}
+.sectionTwo__progressBar{
+    width: 100%;
+    height: 19px;
+    background: var(--VeryDarkBlueBar);
+    border-radius: 32px;    
+    padding-top: 2px;
+    padding-left: 3px;
+    margin-bottom: 10px;
+}
+.sectionTwo__progressBar--coloured{
+    background: linear-gradient(90deg, var(--GradientOne), var(--GradientTwo));
+    width: 76%;
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 32px;
+}
+.sectionTwo__progressBar--ball{
+    background-color: var(--White);
+    width: 13px;
+    height: 13px;
+    border-radius: 32px;
+    margin-right: 2px;
+    margin-top: -0.5px;
+}
+.sectionTwo__description{
+    display: flex;
+    justify-content: space-between;
+    color: var(--PaleBlue);   
+    font-weight: 700;
+    font-size: 0.8em;
+}
+.sectionTwo__description--float{
+    width: 170px;
+    height: 70px;
+    background: var(--White);
+    border-radius: 8px;  
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 130px;
+    right: 75px;
+}
+.sectionTwo__description--floatDescription{
+    font-size: 2.5em;
+}
+.sectionTwo__span{
+    color: var(--GrayishBlue);
+}
+/* Frontend Mentors footer */
+.attribution{     
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+/* desktop view */
+@media (min-width: 800px){
+    html{
+        background-color: var(--VeryDarkBlue);
+    }
+    body{
+        background-image: url(images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: size;       
+        margin-top: 404px;
+        
+    }
+    .main{    
+        width: 1000px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -70px;
+        gap: 30px;
+    }
+    .sectionOne{
+        width: 410px;
+        height: 185px;
+    }
+    .sectionTwo{
+        width: 650px;
+    }
+    .sectionTwo__description--float{
+        top: -50px;
+        
+    }
+    .sectionTwo__description--float::after{
+        content: '';
+        border: 30px solid;
+        width: 30px;
+        border-color: transparent rgb(255, 255, 255) transparent transparent;
+        position: relative;
+        top: 35px;
+    }
+}
